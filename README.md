@@ -7,6 +7,7 @@ The official repository for "**Parallel-R1: Towards Parallel Thinking via Reinfo
 * **2025-09-11**: The cold-start dataset, [Parallel-GSM8K](https://huggingface.co/Parallel-R1), is now available on Hugging Face. (Stay tuned for training/evaluation codes)
 * **2025-09-10**: We have released our paper, "[Parallel-R1: Towards Parallel Thinking via Reinforcement Learning](https://arxiv.org/abs/2509.07980)".
 
+
 ## **About**
 This project introduces **Parallel-R1**, a new **reinforcement learning (RL)** framework designed to teach large language models (LLMs) **parallel thinking** for complex, real-world reasoning tasks. Unlike existing methods that rely on supervised fine-tuning (SFT) over costly, synthetic data, our approach enables models to learn parallel behaviors through RL.
 

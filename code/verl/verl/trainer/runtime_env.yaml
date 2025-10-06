@@ -1,0 +1,9 @@
+working_dir: ./
+excludes: ["/.git/"]
+env_vars:
+  TORCH_NCCL_AVOID_RECORD_STREAMS: "1"
+  HF_HUB_TOKEN: "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"
+  GLOO_SOCKET_IFNAME: "bond1"
+  TORCH_NCCL_AVOID_RECORD_STREAMS: "1"
+  http_proxy: "http://star-proxy.oa.com:3128"
+  https_proxy: "http://star-proxy.oa.com:3128"
