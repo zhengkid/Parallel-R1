@@ -3,6 +3,7 @@
 The official repository for "**Parallel-R1: Towards Parallel Thinking via Reinforcement Learning**".
 
 ## **Updates**
+* **2025-10-05**: Released Training/Evaluation code; Released [Qwen3-4B-Base with adding special tokens](https://huggingface.co/Parallel-R1) with special tokens, along with the [Parallel-Unseen (S2) 200-step](https://huggingface.co/Parallel-R1) checkpoint to support reproduction of mid-training experiments.
 * **2025-09-11**: The cold-start dataset, [Parallel-GSM8K](https://huggingface.co/Parallel-R1), is now available on Hugging Face. (Stay tuned for training/evaluation codes)
 * **2025-09-10**: We have released our paper, "[Parallel-R1: Towards Parallel Thinking via Reinforcement Learning](https://arxiv.org/abs/2509.07980)".
 
@@ -35,6 +36,60 @@ This project introduces **Parallel-R1**, a new **reinforcement learning (RL)** f
 | Parallel-R1-Unseen (S2) | 63.0 | 19.0 | 42.2 | 16.3 | 31.8 | 67.5 | 91.5 | 84.5 | 46.8 |
 
 
+## 🧱 Release Overview
+
+| Category | Name | Description | Link |
+|-----------|------|--------------|------|
+| 🧠 **Models** | Qwen3-4B-Base-Special | Base model with added special tokens `<Parallel>`, `<Path>`, `<Summary>` | [🤗 Hugging Face](https://huggingface.co/Parallel-R1) |
+|  | Parallel-R1-Unseen (S2) | 200-step mid-training checkpoint for reproduction of mid-training experiments| [🤗 Hugging Face](https://huggingface.co/Parallel-R1) |
+| 📘 **Datasets** | Parallel-GSM8K | Cold-start dataset for teaching parallel format | [🤗 Hugging Face](https://huggingface.co/Parallel-R1) |
+
+##  Training Logs
+
+
+
+[🤗 Training Logs](https://api.wandb.ai/links/logical_reasoning/a538trv4)
+
+
+## 🚀 Usage
+
+### **1️⃣ Environment Setup**
+
+We recommend using **Python 3.10+** and creating a fresh conda environment:
+
+```bash
+conda create -n parallel-r1 python=3.10 -y
+conda activate parallel-r1
+USE_MEGATRON=0 bash scripts/install_vllm_sglang_mcore.sh
+pip install --no-deps -e .
+```
+
+### **2️⃣ Perform SFT**
+
+```bash
+cd verl
+sh training_scripts/sft_exp.sh
+```
+
+### **2️⃣ Perform RL**
+To train Parallel-R1-Unseen (S1) from scratch 
+```bash
+cd verl
+sh training_scripts/rl_exp_s1.sh
+```
+To train Parallel-R1-Unseen (S2) from scratch 
+```bash
+cd verl
+sh training_scripts/rl_exp_s2.sh
+```
+
+To reproduce results of mid-training experiments
+```bash
+cd verl
+sh training_scripts/mid_training_exp.sh
+```
+
+
 ### Citation
 
 If you think this work is useful, please cite our paper.
@@ -49,3 +104,4 @@ If you think this work is useful, please cite our paper.
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2509.07980}, 
 }
+
