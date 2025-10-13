@@ -59,6 +59,7 @@ This project introduces **Parallel-R1**, a new **reinforcement learning (RL)** f
 We recommend using **Python 3.10+** and creating a fresh conda environment:
 
 ```bash
+cd verl
 conda create -n parallel-r1 python=3.10 -y
 conda activate parallel-r1
 USE_MEGATRON=0 bash scripts/install_vllm_sglang_mcore.sh
