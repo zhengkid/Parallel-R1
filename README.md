@@ -3,7 +3,7 @@
 The official repository for "**Parallel-R1: Towards Parallel Thinking via Reinforcement Learning**".
 
 ## **Updates**
-* **2025-10-15**: 🎉Parallel-R1 was accepted at [Neurips 2025 Efficient Reasoning workshop]([https://huggingface.co/Parallel-R1](https://efficient-reasoning.github.io/)).
+* **2025-10-15**: 🎉Parallel-R1 was accepted at [Neurips 2025 Efficient Reasoning workshop](https://efficient-reasoning.github.io/).
 * **2025-10-05**: Released Training/Evaluation code; Released [Qwen3-4B-Base with adding special tokens](https://huggingface.co/Parallel-R1) with special tokens, along with the [Parallel-Unseen (S2) 200-step](https://huggingface.co/Parallel-R1) checkpoint to support reproduction of mid-training experiments.
 * **2025-09-11**: The cold-start dataset, [Parallel-GSM8K](https://huggingface.co/Parallel-R1), is now available on Hugging Face. (Stay tuned for training/evaluation codes)
 * **2025-09-10**: We have released our paper, "[Parallel-R1: Towards Parallel Thinking via Reinforcement Learning](https://arxiv.org/abs/2509.07980)".
