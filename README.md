@@ -98,13 +98,10 @@ sh training_scripts/mid_training_exp.sh
 If you think this work is useful, please cite our paper.
 
 ```bibtex
-@misc{zheng2025parallelr1parallelthinkingreinforcement,
-      title={Parallel-R1: Towards Parallel Thinking via Reinforcement Learning}, 
-      author={Tong Zheng and Hongming Zhang and Wenhao Yu and Xiaoyang Wang and Xinyu Yang and Runpeng Dai and Rui Liu and Huiwen Bao and Chengsong Huang and Heng Huang and Dong Yu},
-      year={2025},
-      eprint={2509.07980},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2509.07980}, 
+@article{zheng2025parallel,
+  title={Parallel-r1: Towards parallel thinking via reinforcement learning},
+  author={Zheng, Tong and Zhang, Hongming and Yu, Wenhao and Wang, Xiaoyang and Yang, Xinyu and Dai, Runpeng and Liu, Rui and Bao, Huiwen and Huang, Chengsong and Huang, Heng and others},
+  journal={arXiv preprint arXiv:2509.07980},
+  year={2025}
 }
 
