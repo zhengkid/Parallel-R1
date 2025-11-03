@@ -150,7 +150,7 @@ class FSDPParallelThinkingSFTTrainer:
             dataset=self.train_dataset,
             batch_size=config.data.train_batch_size,
             sampler=self.train_sampler,
-            num_workers=8,
+            num_workers=4,
             pin_memory=True,
             drop_last=True,
         )
@@ -160,7 +160,7 @@ class FSDPParallelThinkingSFTTrainer:
             dataset=self.val_dataset,
             batch_size=config.data.micro_batch_size_per_gpu,
             sampler=self.val_sampler,
-            num_workers=8,
+            num_workers=4,
             pin_memory=True,
             drop_last=True,
         )

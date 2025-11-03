@@ -5,16 +5,16 @@ sleep 5
 
 set -x
 
-DAPO_train_path=./verl/data_preprocess_scripts/data/dapo/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_reward/train.parquet
-APO_combiene_test_path=./verl/data_preprocess_scripts/data/APO_combine/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_reward/test.parquet
+DAPO_train_path=./verl/data_preprocess_scripts/data/dapo/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward/train.parquet
+APO_combiene_test_path=./verl/data_preprocess_scripts/data/APO_combine/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward/test.parquet
 train_files="['$DAPO_train_path']"
 test_files="['$APO_combiene_test_path']"
 
 project_name=Parallel-R1
-experiment_name=Parallel-R1-Unseen-S1
+experiment_name=Parallel-R1-Unseen-S2-qwen2.5-7b-base
 default_local_dir=./$project_name/$experiment_name
 validation_data_dir=$default_local_dir/val-log
-base_model=Parallel-R1/Parallel-SFT-Unseen # Or the model you trained with previous stage
+base_model= # Or the model you trained with previous stage
 
 use_dynamic_bsz=False
 offload=False
@@ -52,6 +52,7 @@ python -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.log_prob_max_token_len_per_gpu=$((max_length + max_prompt_len)) \
     actor_rollout_ref.model.path="${base_model}" \
     actor_rollout_ref.actor.optim.lr=1e-6 \
+    actor_rollout_ref.actor.clip_ratio_high=0.28 \
     actor_rollout_ref.model.use_remove_padding=False \
     actor_rollout_ref.actor.ppo_mini_batch_size=128 \
     actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=2 \
