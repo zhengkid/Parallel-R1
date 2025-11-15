@@ -369,5 +369,5 @@ algorithm:
     reweight_method: pow
     weight_pow: 2.0
 ray_init:
-  num_cpus: null
+  num_cpus: 16
   timeline_json_file: null
