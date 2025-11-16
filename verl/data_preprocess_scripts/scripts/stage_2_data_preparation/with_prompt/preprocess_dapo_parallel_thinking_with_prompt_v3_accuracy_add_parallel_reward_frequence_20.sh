@@ -6,9 +6,9 @@ set -euo pipefail
 
 DATASET_NAME=Leo-Dai/APO_combine #Leo-Dai/dapo-math-17k_dedup # Leo-Dai/APO_combine #Leo-Dai/dapo-math-17k_dedup 
 TEMPLATE_FILE="../prompts/adaptive_parallel_thinking_v3.txt"
-OUTPUT_dir="data/APO_combine/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_alternating_ratio_0_5"
+OUTPUT_dir="data/APO_combine/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_frequence_20"
 SPLIT="train"            # 可选，默认 train
-REWARD_METHOD="accuracy_parallel_interv_reward_alternating_ratio_0_5" #"accuracy_times_special_token_reward_times_format"
+REWARD_METHOD="accuracy_parallel_interv_reward_frequence_20" #"accuracy_times_special_token_reward_times_format"
 
 # 如果目录不存在就创建
 if [ ! -d "$OUTPUT_dir" ]; then
@@ -28,9 +28,9 @@ python dapo_parallel_thinking.py \
 
 DATASET_NAME=Leo-Dai/dapo-math-17k_dedup #Leo-Dai/dapo-math-17k_dedup # Leo-Dai/APO_combine #Leo-Dai/dapo-math-17k_dedup 
 TEMPLATE_FILE="../prompts/adaptive_parallel_thinking_v3.txt"
-OUTPUT_dir="data/dapo/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_alternating_ratio_0_5"
+OUTPUT_dir="data/dapo/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_frequence_20"
 SPLIT="train"            # 可选，默认 train
-REWARD_METHOD="accuracy_parallel_interv_reward_alternating_ratio_0_5" #"accuracy_times_special_token_reward_times_format"
+REWARD_METHOD="accuracy_parallel_interv_reward_frequence_20" #"accuracy_times_special_token_reward_times_format"
 # 如果目录不存在就创建
 if [ ! -d "$OUTPUT_dir" ]; then
   mkdir -p "$OUTPUT_dir"

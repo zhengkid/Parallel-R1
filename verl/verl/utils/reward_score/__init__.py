@@ -92,6 +92,12 @@ def default_compute_score(
         elif extra_info['reward_method'] == 'accuracy_parallel_interv_reward':
             from . import math_dapo_acc_parallel_interved
             res = math_dapo_acc_parallel_interved.compute_score(solution_str, solution_str_with_special_tokens, ground_truth, extra_info['global_steps'])
+        elif extra_info['reward_method'] == 'accuracy_parallel_interv_reward_frequence_20':
+            from . import math_dapo_acc_parallel_interved_frequence_20
+            res = math_dapo_acc_parallel_interved_frequence_20.compute_score(solution_str, solution_str_with_special_tokens, ground_truth, extra_info['global_steps'])
+        elif extra_info['reward_method'] == 'accuracy_parallel_interv_reward_alternating_ratio_0_5':
+            from . import math_dapo_acc_parallel_interved_alternating_ratio_0_5
+            res = math_dapo_acc_parallel_interved_alternating_ratio_0_5.compute_score(solution_str, solution_str_with_special_tokens, ground_truth, extra_info['global_steps'])
         # elif extra_info['reward_method'] == 'accuracy_add_diversity_reward':
         #     from . import math_dapo_efficiency
         #     res = math_dapo_diversity.compute_score(solution_str, solution_str_with_special_tokens, ground_truth)
