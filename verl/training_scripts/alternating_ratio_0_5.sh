@@ -5,13 +5,13 @@ sleep 5
 
 set -x
 
-DAPO_train_path=./verl/data_preprocess_scripts/data/dapo/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_alternating_ratio_0_5/train.parquet
-APO_combiene_test_path=./verl/data_preprocess_scripts/data/APO_combine/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_alternating_ratio_0_5/test.parquet
+DAPO_train_path=./data_preprocess_scripts/data/dapo/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_alternating_ratio_0_5/train.parquet
+APO_combiene_test_path=./data_preprocess_scripts/data/APO_combine/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_alternating_ratio_0_5/test.parquet
 train_files="['$DAPO_train_path']"
 test_files="['$APO_combiene_test_path']"
 
 project_name=Parallel-R1
-experiment_name=Parallel-R1-Unseen-S2-alternating-0.5
+experiment_name=Parallel-R1-Unseen-S2-alternating-0_5
 default_local_dir=./$project_name/$experiment_name
 validation_data_dir=$default_local_dir/val-log
 base_model=Parallel-R1/Parallel-SFT-Unseen # Or the model you trained with previous stage

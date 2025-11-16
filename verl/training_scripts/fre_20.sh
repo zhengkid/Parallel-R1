@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-pkill python
+
 sleep 5
 
 
 set -x
 
-DAPO_train_path=./verl/data_preprocess_scripts/data/dapo/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_frequence_20/train.parquet
-APO_combiene_test_path=./verl/data_preprocess_scripts/data/APO_combine/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_frequence_20/test.parquet
+DAPO_train_path=./data_preprocess_scripts/data/dapo/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_frequence_20/train.parquet
+APO_combiene_test_path=./data_preprocess_scripts/data/APO_combine/adaptive_parallel_thinking_final_with_prompt_v3/rl_all_accuracy_parallel_interv_reward_frequence_20/test.parquet
 train_files="['$DAPO_train_path']"
 test_files="['$APO_combiene_test_path']"
 
